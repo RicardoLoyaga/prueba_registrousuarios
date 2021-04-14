@@ -25,8 +25,8 @@ public class UsuarioRepository implements UserRepository {
     }
 
     @Override
-    public List<User> getById(int id){
-        List<Usuario> usuarios = usuarioCrudRepository.findById(id);
+    public List<User> getById(int userId){
+        List<Usuario> usuarios = usuarioCrudRepository.findByIdUsuario(userId);
         return mapper.toUsers(usuarios);
     }
 
@@ -43,7 +43,7 @@ public class UsuarioRepository implements UserRepository {
     }
 
     @Override
-    public void delete(int id){
-        usuarioCrudRepository.deleteById(id);
+    public void delete(int userId){
+        usuarioCrudRepository.deleteById(userId);
     }
 }

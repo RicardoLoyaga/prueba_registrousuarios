@@ -1,7 +1,7 @@
 package com.pruebaMegaProfer.registrousuarios.domain;
 
 public class User {
-    private int id;
+    private int userId;
     private String identify;
     private String name;
     private int age;
@@ -9,12 +9,12 @@ public class User {
     private String password;
     private String city;
 
-    public int getId() {
-        return id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getIdentify() {

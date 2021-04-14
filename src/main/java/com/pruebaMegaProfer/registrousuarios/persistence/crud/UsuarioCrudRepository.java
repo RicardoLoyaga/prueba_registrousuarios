@@ -7,6 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UsuarioCrudRepository extends CrudRepository<Usuario, Integer> {
-    List<Usuario> findById(int id);
-    List<Usuario> findByIdentificacion(String identificacion);
+    public List<Usuario> findByIdUsuario(int idUsuario);
+    public List<Usuario> findByIdentificacion(String identificacion);
 }

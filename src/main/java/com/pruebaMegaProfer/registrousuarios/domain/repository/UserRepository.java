@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface UserRepository {
     List<User> getAll();
-    List<User> getById(int id);
+    List<User> getById(int userId);
     List<User> getByIdentify(String identify);
     User save(User user);
-    void delete(int id);
+    void delete(int userId);
 }

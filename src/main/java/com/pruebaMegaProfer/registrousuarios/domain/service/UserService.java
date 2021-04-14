@@ -14,11 +14,12 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> getAll(){
+
         return userRepository.getAll();
     }
 
-    public List<User> getById(int id){
-        return userRepository.getById(id);
+    public List<User> getById(int userId){
+        return userRepository.getById(userId);
     }
 
     public  List<User> getByIdentify(String identify){
@@ -29,13 +30,16 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public void delete(int id){
+    public void delete(int userId){
 
     }
+
     /*public boolean delete(int id){
-        return getById(id).map(user -> {
+        if (getById(id).isPresent()){
             userRepository.delete(id);
             return true;
-        }).orElse(false);
+        }else{
+            return false;
+        }
     }*/
 }
